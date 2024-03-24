@@ -37,9 +37,9 @@ const BusinessConsultancy = () => {
             <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
               <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <Link className="nav-link dropdown-toggle" to="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Services
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
                     <li><Link className="dropdown-item" to="/governmentWork">Government Works</Link></li>
                     <li><Link className="dropdown-item" to="/importExport">Import / Export</Link></li>
@@ -59,7 +59,7 @@ const BusinessConsultancy = () => {
         <div className="container">
             {/* <div className="governmentWork-heading">Government Works</div> */}
             <div className="businessConsultancy-subheading text-uppercase">Business Consultancy</div>
-            <a className="btn btn-primary btn-xl text-uppercase" href="#portfolio">Portfolio</a>
+            <Link className="btn btn-primary btn-xl text-uppercase" to="#portfolio">Portfolio</Link>
         </div>
       </header>
 
@@ -128,14 +128,14 @@ const BusinessConsultancy = () => {
             <div className="row align-items-center">
               
                 <div className="col-lg-4 text-lg-start">
-                  <a className="link-dark text-decoration-none me-4" href="#!">Privacy Policy</a>
-                  <a className="link-dark text-decoration-none" href="#!">Terms of Use</a> <br /> <br />
+                  <Link className="link-dark text-decoration-none me-4" to="#!">Privacy Policy</Link>
+                  <Link className="link-dark text-decoration-none" to="#!">Terms of Use</Link> <br /> <br />
                   Copyright &copy; www.blueearthgroups.com 2024
                 </div>
                 <div className="col-lg-4 my-3 my-lg-0">
-                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+                    <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Twitter"><i className="fab fa-twitter"></i></Link>
+                    <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Facebook"><i className="fab fa-facebook-f"></i></Link>
+                    <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></Link>
                 </div>
                 <div className="col-lg-4 text-lg-end">
                   +91 9893266756 <img src="assets/img/footer/india-flag-icon.png" alt="" style={{ height: "auto", width: "20px" }}/> LIG - 31, HUDCO AAMDI NAGAR, BHILAI, DIST - DURG (C.G.) 490009 <br /> <br />

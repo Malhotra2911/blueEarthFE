@@ -29,7 +29,7 @@ const Home = () => {
       {/* <!-- Navigation--> */}
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div className="container">
-          <a className="navbar-brand" href="#page-top"><img src="assets/img/navbarLogo.png" alt="..." style={{height: "auto", width: "65px", display: "block"}}/></a>
+          <Link className="navbar-brand" to="#page-top"><img src="assets/img/navbarLogo.png" alt="..." style={{height: "auto", width: "65px", display: "block"}}/></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i className="fas fa-bars ms-1"></i>
@@ -38,9 +38,9 @@ const Home = () => {
             <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
               <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <Link className="nav-link dropdown-toggle" to="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Services
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
                     <li><Link className="dropdown-item" to="/governmentWork">Government Works</Link></li>
                     <li><Link className="dropdown-item" to="/importExport">Import / Export</Link></li>
@@ -60,7 +60,7 @@ const Home = () => {
             <div className="container">
                 <div className="masthead-heading">Welcome To <span style={{color: "#ffc800"}}>Blue Earth Groups</span></div>
                 <div className="masthead-subheading text-uppercase">One Stop Search For A Way To Success!</div>
-                <a className="btn btn-primary btn-xl text-uppercase" href="#about">Tell Me More</a>
+                <Link className="btn btn-primary btn-xl text-uppercase" to="#about">Tell Me More</Link>
             </div>
         </header>
         {/* <!-- About--> */}
@@ -153,9 +153,9 @@ const Home = () => {
                             <img className="mx-auto rounded-circle" src="assets/img/team/4.jpg" alt="..." />
                             <h4>Nitin Rao</h4>
                             <p className="text-muted">Founder</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Parveen Anand Twitter Profile"><i className="fab fa-twitter"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Parveen Anand Facebook Profile"><i className="fab fa-facebook-f"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Parveen Anand LinkedIn Profile"><i className="fab fa-linkedin-in"></i></Link>
                         </div>
                     </div>
                     <div className="col-lg-6">
@@ -163,9 +163,9 @@ const Home = () => {
                             <img className="mx-auto rounded-circle" src="assets/img/team/5.png" alt="..." />
                             <h4>B Sharat Kumar</h4>
                             <p className="text-muted">Founder</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Diana Petersen Facebook Profile"><i className="fab fa-facebook-f"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Diana Petersen LinkedIn Profile"><i className="fab fa-linkedin-in"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -178,9 +178,9 @@ const Home = () => {
                             <img className="mx-auto rounded-circle" src="assets/img/team/6.jpeg" alt="..." />
                             <h4>Dariya Brown</h4>
                             <p className="text-muted">Poland Legal Lawyer</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Parveen Anand Twitter Profile"><i className="fab fa-twitter"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Parveen Anand Facebook Profile"><i className="fab fa-facebook-f"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Parveen Anand LinkedIn Profile"><i className="fab fa-linkedin-in"></i></Link>
                         </div>
                     </div>
                     <div className="col-lg-3">
@@ -188,9 +188,9 @@ const Home = () => {
                             <img className="mx-auto rounded-circle" src="assets/img/team/1.jpeg" alt="..." />
                             <h4>Harish</h4>
                             <p className="text-muted">Marketing Head</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></Link>
                         </div>
                     </div>
                     <div className="col-lg-3">
@@ -198,9 +198,9 @@ const Home = () => {
                             <img className="mx-auto rounded-circle" src="assets/img/team/2.jpeg" alt="..." />
                             <h4>Girish</h4>
                             <p className="text-muted">Authorised Partner</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></Link>
                         </div>
                     </div>
                     <div className="col-lg-3">
@@ -208,9 +208,9 @@ const Home = () => {
                             <img className="mx-auto rounded-circle" src="assets/img/team/3.jpeg" alt="..." />
                             <h4>Sai Ram</h4>
                             <p className="text-muted">Marketing Head</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></Link>
+                            <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -306,14 +306,14 @@ const Home = () => {
             <div className="row align-items-center">
               
                 <div className="col-lg-4 text-lg-start">
-                  <a className="link-dark text-decoration-none me-4" href="#!">Privacy Policy</a>
-                  <a className="link-dark text-decoration-none" href="#!">Terms of Use</a> <br /> <br />
+                  <Link className="link-dark text-decoration-none me-4" to="#!">Privacy Policy</Link>
+                  <Link className="link-dark text-decoration-none" to="#!">Terms of Use</Link> <br /> <br />
                   Copyright &copy; www.blueearthgroups.com 2024
                 </div>
                 <div className="col-lg-4 my-3 my-lg-0">
-                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+                    <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Twitter"><i className="fab fa-twitter"></i></Link>
+                    <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="Facebook"><i className="fab fa-facebook-f"></i></Link>
+                    <Link className="btn btn-dark btn-social mx-2" to="#!" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></Link>
                 </div>
                 <div className="col-lg-4 text-lg-end">
                   +91 9893266756 <img src="assets/img/footer/india-flag-icon.png" alt="" style={{ height: "auto", width: "20px" }}/> LIG - 31, HUDCO AAMDI NAGAR, BHILAI, DIST - DURG (C.G.) 490009 <br /> <br />
