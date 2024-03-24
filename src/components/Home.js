@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
@@ -28,7 +29,7 @@ const Home = () => {
       {/* <!-- Navigation--> */}
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div className="container">
-          <a className="navbar-brand" href="#page-top"><img src="assets/img/navbarLogo.png" alt="..." style={{height: "auto", width: "50px", display: "block"}}/></a>
+          <a className="navbar-brand" href="#page-top"><img src="assets/img/navbarLogo.png" alt="..." style={{height: "auto", width: "65px", display: "block"}}/></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i className="fas fa-bars ms-1"></i>
@@ -36,8 +37,18 @@ const Home = () => {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
               <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
-              <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
-              <li className="nav-item"><a className="nav-link" href="#portfolio">Portfolio</a></li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Services
+                </a>
+                <ul className="dropdown-menu">
+                    <li><Link className="dropdown-item" to="/governmentWork">Government Works</Link></li>
+                    <li><Link className="dropdown-item" to="/importExport">Import / Export</Link></li>
+                    <li><Link className="dropdown-item" to="/internationalTrade">International Trade</Link></li>
+                    <li><Link className="dropdown-item" to="/businessConsultancy">Business Consultancy</Link></li>
+                </ul>
+              </li>
+              {/* <li className="nav-item"><a className="nav-link" href="#portfolio">Portfolio</a></li> */}
               <li className="nav-item"><a className="nav-link" href="#team">Team</a></li>
               <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
             </ul>
@@ -47,8 +58,8 @@ const Home = () => {
       {/* <!-- Masthead--> */}
         <header className="masthead">
             <div className="container">
-                <div className="masthead-subheading">Welcome To Blue Earth!</div>
-                <div className="masthead-heading text-uppercase">It's Nice To Meet You</div>
+                <div className="masthead-heading">Welcome To <span style={{color: "#ffc800"}}>Blue Earth Groups</span></div>
+                <div className="masthead-subheading text-uppercase">One Stop Search For A Way To Success!</div>
                 <a className="btn btn-primary btn-xl text-uppercase" href="#about">Tell Me More</a>
             </div>
         </header>
@@ -57,7 +68,7 @@ const Home = () => {
             <div className="container">
                 <div className="text-center">
                     <h2 className="section-heading text-uppercase">About</h2>
-                    <h3 className="section-subheading text-muted"><strong>Blue Earth SP&ZO</strong> Consultancy and Work Agency is a dynamic and forward-thinking consultancy firm primarily focusing on providing expert advisory services to businesses and individuals alike. We have established ourselves in Poland by combining comprehensive consulting solutions with innovative workforce services. Our core objective is to foster business growth, enhance human capital development, and create lasting success stories for our clients and candidates. Blue Earth SP&ZO is the part of Blue Earth Group of Enterprises.</h3>
+                    <h3 className="section-subheading text-muted">At <strong>Blue Earth Groups Of Enterprises</strong>, we are a dynamic conglomerate specializing in consulting services, international trade facilitation, government project management, and import/export operations. With a focus on delivering tailored solutions and fostering mutually beneficial partnerships, we leverage our extensive expertise and global network to drive success for our clients across diverse sectors. Our commitment to excellence, innovation, and ethical practices ensures that we consistently exceed expectations and contribute positively to the growth and development of businesses and communities worldwide</h3>
                 </div>
                 <ul className="timeline">
                     <li>
@@ -67,7 +78,7 @@ const Home = () => {
                                 <h4>Vision</h4>
                                 {/* <h4 className="subheading">Our Humble Beginnings</h4> */}
                             </div>
-                            <div className="timeline-body"><p className="text-muted">To be the trusted choice for consultancy and workforce solutions, driving sustainable progress for our clients and candidates through our expertise and dedication.</p></div>
+                            <div className="timeline-body"><p className="text-muted">Our vision is to be a global leader in innovation, driving positive change and shaping the future of industries we serve. Through our commitment to excellence, integrity, and sustainability, we aim to inspire and empower our employees, exceed customer expectations, and create lasting value for our shareholders and communities worldwide</p></div>
                         </div>
                     </li>
                     <li className="timeline-inverted">
@@ -77,7 +88,7 @@ const Home = () => {
                                 <h4>Mission</h4>
                                 {/* <h4 className="subheading">An Agency is Born</h4> */}
                             </div>
-                            <div className="timeline-body"><p className="text-muted">Our mission is to empower businesses with strategic insights and to connect job seekers with their ideal employment opportunities, thereby contributing to the growth of our clients and the prosperity of our candidates.</p></div>
+                            <div className="timeline-body"><p className="text-muted">Our mission is to leverage our diverse portfolio of companies to deliver innovative solutions, exceptional value, and sustainable growth to our customers, stakeholders, and communities. Guided by integrity, collaboration, and excellence, we strive to make a positive impact in every market we serve while fostering a culture of continuous improvement and social responsibility.</p></div>
                         </div>
                     </li>
                     <li className="timeline-inverted">
@@ -96,358 +107,35 @@ const Home = () => {
         </section>
         {/* <!-- Services--> */}
         <section className="page-section" id="services">
-            <div className="container">
+            <div className="container section-effect">
                 <div className="text-center">
                     <h2 className="section-heading text-uppercase">Services</h2>
-                    <h3 className="section-subheading text-muted"><strong>Blue Earth SP&ZO</strong> Consultancy and Work Agency is your partner in achieving business success and individual career growth. Whether you are a business seeking expert guidance or a job seeker pursuing your dream career, we are committed to delivering the right solutions for you. Join us on your journey to success and prosperity</h3>
+                    <h3 className="section-subheading text-muted"><strong>Blue Earth Groups Of Enterprises</strong> offers a comprehensive suite of services designed to facilitate seamless operations in today's global marketplace. With expertise in Government Works, Import/Export, International Trade, and Business Consultancy, we empower our clients to navigate complex regulatory landscapes, optimize supply chains, and expand their market reach with confidence. Whether it's facilitating cross-border transactions, providing strategic business advice, or streamlining administrative processes, our dedicated team ensures that every aspect of your business operations is efficiently managed and strategically aligned for success on the international stage.</h3>
                 </div>
                 <div className="row text-center">
                     <div className="col-md-3">
-                        {/* <span className="fa-stack fa-4x">
-                            <i className="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i className="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span> */}
+                        <Link to="/governmentWork" style={{ textDecoration: "none", color: "black" }}>
                         <img src="assets/img/services/government.jpg" alt="..." style={{height: "auto", width: "200px"}} />
                         <h4 className="my-3">Government works</h4>
-                        {/* <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> */}
+                        </Link>
                     </div>
                     <div className="col-md-3">
-                        {/* <span className="fa-stack fa-4x">
-                            <i className="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i className="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span> */}
+                        <Link to="/importExport" style={{ textDecoration: "none", color: "black" }}>
                         <img src="assets/img/services/import-export.jpg" alt="..." style={{height: "auto", width: "200px"}} />
                         <h4 className="my-3">Import/Export</h4>
-                        {/* <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> */}
+                        </Link>
                     </div>
                     <div className="col-md-3">
-                        {/* <span className="fa-stack fa-4x">
-                            <i className="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i className="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span> */}
+                        <Link to="/internationalTrade" style={{ textDecoration: "none", color: "black" }}>                       
                         <img src="assets/img/services/internationalTrade.jpg" alt="..." style={{height: "auto", width: "200px"}} />
                         <h4 className="my-3">International Trade</h4>
-                        {/* <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> */}
+                        </Link>
                     </div>
                     <div className="col-md-3">
-                        {/* <span className="fa-stack fa-4x">
-                            <i className="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i className="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span> */}
+                        <Link to="/businessConsultancy" style={{ textDecoration: "none", color: "black" }}>
                         <img src="assets/img/services/businessConsultancy.jpg" alt="..." style={{height: "auto", width: "200px"}} />
                         <h4 className="my-3">Business Consultancy</h4>
-                        {/* <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> */}
-                    </div>
-                </div>
-            </div>
-        </section>
-        {/* <!-- Portfolio Grid--> */}
-        <section className="page-section bg-light" id="portfolio">
-            <div className="container">
-                <div className="text-center">
-                    <h2 className="section-heading text-uppercase">Portfolio</h2>
-                    {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
-                </div>
-                <div className="row">
-                    <div className="col-lg-4 col-sm-6 mb-4">
-                        {/* <!-- Portfolio item 1--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/7.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Threads</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Illustration</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6 mb-4">
-                        {/* <!-- Portfolio item 2--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/8.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Explore</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Graphic Design</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6 mb-4">
-                        {/* <!-- Portfolio item 3--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/9.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Finish</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Identity</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        {/* <!-- Portfolio item 4--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/10.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Lines</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Branding</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        {/* <!-- Portfolio item 5--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/11.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Southwest</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Website Design</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 6--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/12.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 7--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/13.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 8--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/14.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 9--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/15.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 10--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal10">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/16.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 11--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal11">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/17.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 12--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal12">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/18.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 13--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal13">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/19.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 14--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal14">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/20.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 15--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal15">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/21.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 16--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal16">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/22.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 17--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal17">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/26.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 18--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal18">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/27.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 19--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal19">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/28.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-6">
-                        {/* <!-- Portfolio item 20--> */}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal20">
-                                <div className="portfolio-hover">
-                                    <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" src="assets/img/portfolio/29.jpeg" alt="..." style={{ height: "200px", width: "600px" }} />
-                            </a>
-                            <div className="portfolio-caption">
-                                {/* <div className="portfolio-caption-heading">Window</div> */}
-                                {/* <div className="portfolio-caption-subheading text-muted">Photography</div> */}
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -485,9 +173,9 @@ const Home = () => {
                     <div className="col-lg-8 mx-auto text-center"><p className="large text-muted">Our Backbone</p></div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4">
+                    <div className="col-lg-3">
                         <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/img/team/6.png" alt="..." />
+                            <img className="mx-auto rounded-circle" src="assets/img/team/6.jpeg" alt="..." />
                             <h4>Dariya Brown</h4>
                             <p className="text-muted">Poland Legal Lawyer</p>
                             <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i className="fab fa-twitter"></i></a>
@@ -495,41 +183,31 @@ const Home = () => {
                             <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-3">
                         <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/img/team/6.png" alt="..." />
-                            <h4>Ola Anna</h4>
-                            <p className="text-muted">Business Client Handler</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/img/team/6.png" alt="..." />
-                            <h4>Girlish</h4>
-                            <p className="text-muted">Commercial Head</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/img/team/6.png" alt="..." />
+                            <img className="mx-auto rounded-circle" src="assets/img/team/1.jpeg" alt="..." />
                             <h4>Harish</h4>
-                            <p className="text-muted">Business Development Head</p>
+                            <p className="text-muted">Marketing Head</p>
                             <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></a>
                             <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></a>
                             <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-3">
                         <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/img/team/6.png" alt="..." />
+                            <img className="mx-auto rounded-circle" src="assets/img/team/2.jpeg" alt="..." />
+                            <h4>Girish</h4>
+                            <p className="text-muted">Authorised Partner</p>
+                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></a>
+                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></a>
+                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div className="col-lg-3">
+                        <div className="team-member">
+                            <img className="mx-auto rounded-circle" src="assets/img/team/3.jpeg" alt="..." />
                             <h4>Sai Ram</h4>
-                            <p className="text-muted">Business Development Manager</p>
+                            <p className="text-muted">Marketing Head</p>
                             <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></a>
                             <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></a>
                             <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
@@ -539,7 +217,7 @@ const Home = () => {
             </div>
         </section>
         {/* <!-- Clients--> */}
-        <div className="py-5">
+        {/* <div className="py-5">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-md-3 col-sm-6 my-3">
@@ -556,13 +234,13 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         {/* <!-- Contact--> */}
         <section className="page-section" id="contact">
             <div className="container">
                 <div className="text-center">
                     <h2 className="section-heading text-uppercase">Contact Us</h2>
-                    <h3 className="section-subheading text-muted">infoconsult@blueearthgroups.com</h3>
+                    <h3 className="section-subheading text-light">infoconsult@blueearthgroups.com</h3>
                 </div>
                 {/* <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
@@ -623,722 +301,27 @@ const Home = () => {
         </section>
         {/* <!-- Footer--> */}
         <footer className="footer py-4">
-            <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
-                    <div className="col-lg-4 my-3 my-lg-0">
-                        <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-                        <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-                        <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div className="col-lg-4 text-lg-end">
-                        <a className="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a className="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                    </div>
+        <hr />
+          <div className="container">
+            <div className="row align-items-center">
+              
+                <div className="col-lg-4 text-lg-start">
+                  <a className="link-dark text-decoration-none me-4" href="#!">Privacy Policy</a>
+                  <a className="link-dark text-decoration-none" href="#!">Terms of Use</a> <br /> <br />
+                  Copyright &copy; www.blueearthgroups.com 2024
+                </div>
+                <div className="col-lg-4 my-3 my-lg-0">
+                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
+                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+                    <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+                </div>
+                <div className="col-lg-4 text-lg-end">
+                  +91 9893266756 <img src="assets/img/footer/india-flag-icon.png" alt="" style={{ height: "auto", width: "20px" }}/> LIG - 31, HUDCO AAMDI NAGAR, BHILAI, DIST - DURG (C.G.) 490009 <br /> <br />
+                  +48 696854337 <img src="assets/img/footer/poland-flag-icon.png" alt="" style={{ height: "auto", width: "20px" }}/> FIRST FLOOR OFFICE NO. 18 SOKOLOWKA 1001-136 WARSAW POLAND
                 </div>
             </div>
+          </div>
         </footer>
-        {/* <!-- Portfolio Modals--> */}
-        {/* <!-- Portfolio item 1 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal1" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/7.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Threads
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 2 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal2" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/8.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Explore
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 3 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal3" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/9.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Finish
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 4 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal4" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/10.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 5 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal5" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/11.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 6 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal6" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/12.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 7 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal7" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/13.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 8 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal8" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/14.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 9 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal9" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/15.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 10 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal10" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/16.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 11 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal11" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/17.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 12 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal12" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/18.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 13 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal13" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/19.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 14 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal14" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/20.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 15 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal15" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/21.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 16 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal16" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/22.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 17 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal17" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/26.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 18 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal18" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/27.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 19 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal19" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/28.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* <!-- Portfolio item 20 modal popup--> */}
-        <div className="portfolio-modal modal fade" id="portfolioModal20" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="modal-body">
-                                    {/* <!-- Project details--> */}
-                                    {/* <h2 className="text-uppercase">Project Name</h2> */}
-                                    {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
-                                    <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/29.jpeg" alt="..." />
-                                    {/* <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> */}
-                                    <ul className="list-inline">
-                                        {/* <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li> */}
-                                        <li>
-                                            <strong>Category: </strong>
-                                            Import / Export
-                                        </li>
-                                    </ul>
-                                    <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i className="fas fa-xmark me-1"></i>
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
   )
 }
