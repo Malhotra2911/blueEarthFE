@@ -118,6 +118,21 @@ const BusinessConsultancy = () => {
                 <img className="img-fluid" src="assets/img/business/8.jpg" alt="..." style={{ height: "200px", width: "600px" }} />
               </div>
             </div>
+            <div className="col-lg-4 col-sm-6 mb-4 image-effect">
+              <div className="portfolio-item">
+                <img className="img-fluid" src="assets/img/business/9.jpg" alt="..." style={{ height: "200px", width: "600px" }} />
+              </div>
+            </div>
+            <div className="col-lg-4 col-sm-6 mb-4 image-effect">
+              <div className="portfolio-item">
+                <img className="img-fluid" src="assets/img/business/10.jpg" alt="..." style={{ height: "200px", width: "600px" }} />
+              </div>
+            </div>
+            <div className="col-lg-4 col-sm-6 mb-4 image-effect">
+              <div className="portfolio-item">
+                <img className="img-fluid" src="assets/img/business/11.jpg" alt="..." style={{ height: "200px", width: "600px" }} />
+              </div>
+            </div>
           </div>
         </div>
       </section>
